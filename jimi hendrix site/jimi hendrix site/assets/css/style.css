@@ -1,0 +1,8 @@
+html {
+  box-sizing: border-box;
+}
+
+header nav #logo {
+  background: transparent;
+  height: 20%;
+}/*# sourceMappingURL=style.css.map */
