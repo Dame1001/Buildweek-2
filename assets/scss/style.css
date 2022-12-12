@@ -17,6 +17,11 @@ nav #likes {
   background-image: linear-gradient(to bottom right, rgb(82, 25, 189), rgb(250, 244, 255));
 }
 
+@media screen and (min-width: 992px) {
+  #nav {
+    background-color: black !important;
+  }
+}
 main {
   background-color: #212121;
   color: white;

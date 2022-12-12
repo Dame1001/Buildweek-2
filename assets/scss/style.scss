@@ -32,7 +32,11 @@ color: white;
 //         }
 //     }
 // }
-
+@media screen and (min-width:992px){
+    #nav{
+        background-color: black!important;
+    }
+}
 main{
 // width: 50vw;
 background-color: #212121;
