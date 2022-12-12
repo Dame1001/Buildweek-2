@@ -39,16 +39,27 @@ color: white;
 }
 main{
 // width: 50vw;
-background-color: #212121;
+background-color: black;
 color: white;
 height: 100vh;
 .card{
-    background-color: #2b2b2b;
+    background-color: black;
+    
     img{
         height: 80px;
         width: 80px;
     }
 }
+@media screen and (min-width:992px){
+    .card{
+        background-color: #2b2b2b;
+    }
+}
+}
+@media screen and (min-width:992px){
+    main{
+        background-color: #212121;
+    }
 }
 // @media screen and (max-width:768px) {
 //     main{

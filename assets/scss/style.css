@@ -23,18 +23,28 @@ nav #likes {
   }
 }
 main {
-  background-color: #212121;
+  background-color: black;
   color: white;
   height: 100vh;
 }
 main .card {
-  background-color: #2b2b2b;
+  background-color: black;
 }
 main .card img {
   height: 80px;
   width: 80px;
 }
+@media screen and (min-width: 992px) {
+  main .card {
+    background-color: #2b2b2b;
+  }
+}
 
+@media screen and (min-width: 992px) {
+  main {
+    background-color: #212121;
+  }
+}
 aside {
   width: 20vw;
   background-color: black;
