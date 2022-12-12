@@ -42,6 +42,13 @@ main{
 background-color: #212121;
 color: white;
 height: 100vh;
+.card{
+    background-color: #2b2b2b;
+    img{
+        height: 80px;
+        width: 80px;
+    }
+}
 }
 // @media screen and (max-width:768px) {
 //     main{

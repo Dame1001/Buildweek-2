@@ -27,6 +27,13 @@ main {
   color: white;
   height: 100vh;
 }
+main .card {
+  background-color: #2b2b2b;
+}
+main .card img {
+  height: 80px;
+  width: 80px;
+}
 
 aside {
   width: 20vw;
