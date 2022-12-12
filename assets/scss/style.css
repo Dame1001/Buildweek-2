@@ -1,1 +1,26 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  height: 100vh;
+}
+
+main {
+  background-color: #212121;
+  color: white;
+  height: 100vh;
+}
+
+aside {
+  background-color: black;
+  color: white;
+  height: 100vh;
+}/*# sourceMappingURL=style.css.map */
