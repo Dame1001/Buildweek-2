@@ -4,19 +4,54 @@
 }
 body{
     font-family: 'Lato', sans-serif;
+    height: 3000px;
 }
+// @media screen and (max-width:768px) {
+//     body{
+//       flex-direction: column-reverse;
+//     }
+//   }
 nav{
+// width:30vw;
 background-color: black ;
 color: white;
-height: 100vh;
+// height: 100vh;
+#likes{
+    padding: 1px 6px 2px;
+    background-image: linear-gradient(to bottom right, rgb(82, 25, 189), rgb(250, 244, 255))
 }
+}
+// @media screen and (max-width:768px) {
+//     nav{
+//         position: sticky;
+//         bottom: 0;
+//         width: 100vw;
+//         height: 10vh;
+//         ul{
+//             flex-direction: row;
+//         }
+//     }
+// }
+
 main{
+// width: 50vw;
 background-color: #212121;
 color: white;
 height: 100vh;
 }
+// @media screen and (max-width:768px) {
+//     main{
+//        width: 100vw;
+//     }
+// }
 aside{
+width: 20vw;
 background-color: black;
 color: white;
-height: 100vh;
+// height: 100vh;
 }
+// @media screen and (max-width:768px) {
+//     aside{
+//        display: none;
+//     }
+// }

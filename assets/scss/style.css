@@ -5,12 +5,16 @@
 
 body {
   font-family: "Lato", sans-serif;
+  height: 3000px;
 }
 
 nav {
   background-color: black;
   color: white;
-  height: 100vh;
+}
+nav #likes {
+  padding: 1px 6px 2px;
+  background-image: linear-gradient(to bottom right, rgb(82, 25, 189), rgb(250, 244, 255));
 }
 
 main {
@@ -20,7 +24,7 @@ main {
 }
 
 aside {
+  width: 20vw;
   background-color: black;
   color: white;
-  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
