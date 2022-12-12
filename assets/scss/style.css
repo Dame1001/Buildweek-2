@@ -5,7 +5,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  height: 3000px;
 }
 
 nav {
@@ -25,7 +24,6 @@ nav #likes {
 main {
   background-color: black;
   color: white;
-  height: 100vh;
 }
 main .card {
   background-color: black;
@@ -41,10 +39,16 @@ main .card img {
 }
 
 @media screen and (min-width: 992px) {
-  #main-home {
+  #main-home, #main-album, #main-artist {
     background-color: #212121;
   }
 }
+@media screen and (max-width: 992px) {
+  .mostra_tabella {
+    display: none;
+  }
+}
+
 aside {
   width: 20vw;
   background-color: black;

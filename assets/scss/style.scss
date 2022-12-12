@@ -4,7 +4,6 @@
 }
 body{
     font-family: 'Lato', sans-serif;
-    height: 3000px;
 }
 // @media screen and (max-width:768px) {
 //     body{
@@ -41,7 +40,6 @@ main{
 // width: 50vw;
 background-color: black;
 color: white;
-height: 100vh;
 .card{
     background-color: black;
     
@@ -57,7 +55,7 @@ height: 100vh;
 }
 }
 @media screen and (min-width:992px){
-    #main-home{
+    #main-home, #main-album, #main-artist{
         background-color: #212121;
     }
 }
