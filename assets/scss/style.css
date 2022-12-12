@@ -39,4 +39,23 @@ aside {
   width: 20vw;
   background-color: black;
   color: white;
+}
+aside ul {
+  padding: 5px;
+}
+aside ul h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+aside ul h6 {
+  color: rgb(238, 238, 238);
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+aside ul p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6rem;
+  color: rgba(238, 238, 238, 0.856);
 }/*# sourceMappingURL=style.css.map */

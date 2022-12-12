@@ -60,6 +60,25 @@ width: 20vw;
 background-color: black;
 color: white;
 // height: 100vh;
+    ul{
+        padding: 5px;
+        h4{
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        h6{
+            color: rgb(238, 238, 238);
+            margin: 0;
+            padding: 0;
+            font-size: 0.8rem;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: 0.6rem;
+            color: rgba(238, 238, 238, 0.856);
+        }
+    }
 }
 // @media screen and (max-width:768px) {
 //     aside{
