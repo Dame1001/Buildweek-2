@@ -378,19 +378,19 @@
         <div class="d-flex flex-column">
           <!-- Define the section for displaying track buttons -->
           <div class="buttons d-flex align-items-center justify-content-center">
-            <div class="prev-track">
+            <div class="prev-track d-none d-lg-block">
               <i class="fa fa-step-backward fa-1x"></i>
             </div>
             <div class="playpause-track">
               <i class="fa fa-play-circle fa-2x"></i>
             </div>
-            <div class="next-track">
+            <div class="next-track d-none d-lg-block">
               <i class="fa fa-step-forward fa-1x"></i>
             </div>
           </div>
   
           <!-- Define the section for displaying the seek slider-->
-          <div class="slider_container d-flex" id="container-duration">
+          <div class="slider_container d-lg-flex d-none" id="container-duration">
             <div class="current-time">00:00</div>
             <input type="range" min="1" max="100" value="0" class="seek_slider styled-slider slider-progress">
             <div class="total-duration">00:00</div>
@@ -399,7 +399,7 @@
   
   
         <!-- Define the section for displaying the volume slider-->
-        <div class="slider_container d-flex flex-row align-items-center justify-content-center">
+        <div class="slider_container d-flex flex-row align-items-center justify-content-center d-none d-lg-block">
           <i class="fa fa-volume-up"></i>
           <input type="range" min="1" max="100" value="99" class="volume_slider styled-slider slider-progress">
           
