@@ -46,6 +46,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  width: 100vw;
   height: 3000px;
 }
 
@@ -166,7 +167,7 @@ footer .volume_slider {
   -moz-appearance: none;
   appearance: none;
   height: 5px;
-  background: black;
+  background: rgb(0, 0, 0);
   opacity: 0.7;
   transition: opacity 0.2s;
 }
@@ -180,6 +181,10 @@ footer .volume_slider::-webkit-slider-thumb {
   background: white;
   cursor: pointer;
   border-radius: 50%;
+}
+footer .seek_slider::-webkit-slider-runnable-track,
+footer .volume_slider::-webkit-slider-runnable-track {
+  background: black;
 }
 footer .seek_slider:hover,
 footer .volume_slider:hover {

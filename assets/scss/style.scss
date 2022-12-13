@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    width: 100vw;
     height: 3000px;
 }
 
@@ -170,13 +171,13 @@ footer {
         width: 40vw;
     }
 
-    .seek_slider,
-    .volume_slider {
-        -webkit-appearance: none;
+     .seek_slider,
+     .volume_slider {
+         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         height: 5px;
-        background: black;
+        background: rgb(0, 0, 0);
         opacity: 0.7;
         -webkit-transition: .2s;
         transition: opacity .2s;
@@ -184,20 +185,26 @@ footer {
 
     .seek_slider::-webkit-slider-thumb,
     .volume_slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
+         -webkit-appearance: none;
         -moz-appearance: none;
-        appearance: none;
+         appearance: none;
         width: 15px;
         height: 15px;
         background: white;
         cursor: pointer;
         border-radius: 50%;
     }
-
-    .seek_slider:hover,
-    .volume_slider:hover {
-        opacity: 1.0;
+    .seek_slider::-webkit-slider-runnable-track,
+    .volume_slider::-webkit-slider-runnable-track{
+        background: black;
     }
+     .seek_slider:hover,
+     .volume_slider:hover {
+         opacity: 1.0;
+     }
+
+
+  
 
     .seek_slider {
         width: 40vw;

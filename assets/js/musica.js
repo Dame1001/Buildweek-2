@@ -20,7 +20,6 @@ let updateTimer;
 
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
-
 function caricaContenuto() {
     fetch('https://striveschool-api.herokuapp.com/api/deezer/album/75621062').then(function (response) {
         return response.json();
@@ -29,6 +28,9 @@ function caricaContenuto() {
         
         playpause_btn.addEventListener('click',()=>{
             playpauseTrack();
+        })
+        seek_slider.addEventListener('change',()=>{
+            seekTo();
         })
         volume_slider.addEventListener('change',()=>{
             setVolume();
