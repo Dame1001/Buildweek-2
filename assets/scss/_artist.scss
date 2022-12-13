@@ -50,18 +50,14 @@
             font-weight: 700;  
         }
     }
+    #follow{
+        padding: 2px 0 3px;
+    }
     .on{
         &:hover{
             background-color: rgb(96, 190, 96);
             color: white;
             border: 1px solid rgb(96, 190, 96);
-        }
-    }
-    .off{
-        &:hover{
-            background-color: white;
-            color: black;
-            border: white;
         }
     }
 }

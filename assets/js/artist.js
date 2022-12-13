@@ -46,7 +46,6 @@ function caricaContenuto() {
 
 let button = document.querySelector('#follow')
 let counter = 0
-button.classList.remove('off')
 button.classList.add('on')
 
 button.addEventListener('click', () => {
@@ -54,11 +53,9 @@ button.addEventListener('click', () => {
         button.textContent = 'Following'
         counter = 1
         button.classList.remove('on')
-        button.classList.replace('off')
     } else {
         button.textContent = 'Follow'
         counter = 0
-        button.classList.remove('off')
         button.classList.add('on')
     }
 })

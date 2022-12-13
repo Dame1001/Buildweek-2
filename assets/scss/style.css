@@ -42,15 +42,13 @@
 #main-artist #sez_sup p {
   font-weight: 700;
 }
+#main-artist #follow {
+  padding: 2px 0 3px;
+}
 #main-artist .on:hover {
   background-color: rgb(96, 190, 96);
   color: white;
   border: 1px solid rgb(96, 190, 96);
-}
-#main-artist .off:hover {
-  background-color: white;
-  color: black;
-  border: white;
 }
 
 * {
