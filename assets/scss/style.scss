@@ -342,3 +342,16 @@ footer {
         cursor: pointer;
     }
 }
+@media screen and (max-width:992px) {
+    #footer-home{
+        width: 94vw;
+        bottom: 95px;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+        border-radius: 15px;
+        margin-right: 3vw;
+        margin-left: 3vw;
+        background-color: #262626;
+    }
+}
