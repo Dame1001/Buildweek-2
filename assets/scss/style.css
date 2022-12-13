@@ -31,12 +31,15 @@
 #main-artist #sez_sup {
   color: rgb(255, 255, 255);
   text-shadow: 4px 4px 10px black;
-  height: 40%;
+  height: 45%;
   padding-left: 20px;
   margin: 0;
 }
 #main-artist #sez_sup h1 {
   font-size: 5rem;
+  font-weight: 700;
+}
+#main-artist #sez_sup p {
   font-weight: 700;
 }
 
@@ -46,8 +49,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  width: 100vw;
-  height: 100vh;
 }
 
 nav {
@@ -158,7 +159,7 @@ aside ul p {
 }
 
 footer {
-  padding: 15px 0;
+  padding: 10px 0px;
   background-color: #181818;
   color: white;
 }
