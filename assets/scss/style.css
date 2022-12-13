@@ -64,6 +64,48 @@ body {
     background: linear-gradient(to bottom, #212121, #0f0f0f, #212121);
   }
 }
+header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  margin-top: 15px;
+}
+header div {
+  position: fixed;
+  left: 27vw;
+  margin-top: 5px;
+}
+header .svg-head-1 {
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+header .svg-head-2 {
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+header button {
+  position: fixed;
+  right: 25vw;
+  color: white;
+  font-weight: 700;
+  background-color: black;
+  border-radius: 25px;
+  border: none;
+  padding: 5px 3px;
+}
+header .svg-head-3 {
+  margin-left: 5px;
+  color: white;
+}
+
 nav {
   background-color: rgba(0, 0, 0, 0.495);
   color: white;
@@ -136,10 +178,34 @@ main .card img {
 }
 main #card-grande {
   background-image: linear-gradient(to top right, black, #1d1d1d);
+  border: none;
+  margin-top: 20px;
 }
 main #immagine-card-grande {
   height: 150px;
   width: 150px;
+  margin: auto 15px;
+}
+main #button1 {
+  color: black;
+  background-color: #1ed760;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 35px;
+}
+main #button2 {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 10px 35px;
+}
+main #p1 {
+  font-size: 1rem;
+}
+main #p2 {
+  font-size: 0.7rem;
+  color: #606060;
 }
 main .card-b {
   background-color: black;
