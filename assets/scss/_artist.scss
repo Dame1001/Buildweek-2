@@ -38,7 +38,7 @@
     }
     #sez_sup{
         color: rgb(255, 255, 255);
-        text-shadow: 4px 4px 10px black;
+        text-shadow: 6px 6px 10px black;
         height: 45%;
         padding-left: 20px;
         margin: 0;
@@ -49,5 +49,19 @@
         p{
             font-weight: 700;  
         }
-    }  
+    }
+    .on{
+        &:hover{
+            background-color: rgb(96, 190, 96);
+            color: white;
+            border: 1px solid rgb(96, 190, 96);
+        }
+    }
+    .off{
+        &:hover{
+            background-color: white;
+            color: black;
+            border: white;
+        }
+    }
 }
