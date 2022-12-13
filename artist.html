@@ -89,13 +89,42 @@
         </li>
       </ul>
     </nav>
+    <!----------------------------- MAIN ----------------------------->
     <main class="col-12 col-lg-7" id="main-artist">
 
+    <!-- SEZIONE SUPERIORE -->
+    <div id="sez_sup" class="d-flex flex-column justify-content-end">
+    </div>
+    
+    <!-- SEZIONE MEDIANA -->
+    <div class="d-flex align-items-center p-3 px-4" id="sez_med">
+      <i class="fa fa-play-circle fa-3x me-5"></i>
+      <button type="button" class="btn btn-outline-light me-4 px-4 py-1" id="follow">Follow</button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff"
+              class="bi bi-three-dots align-self-center me-4" viewBox="0 0 16 16">
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </svg>
+    </div>
 
-
+    <!-- SEZIONE INFERIORE -->
+    <div class="d-flex justify-content-between px-1" id="sez_inf">
+      <div class="container">
+        <h3>Popolari</h3>
+        <table class="table table-borderless bg-transparent align-middle text-white">
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h3>Brani che ti Piacciono</h3>
+        <table id="band_profile" class="table table-borderless bg-transparent align-middle text-white">
+        </table>
+      </div>
+    </div>
 
     </main>
-
+    <!------------------------------- ASIDE ------------------------------->
     <aside class="d-none d-lg-block col-lg-2">
       <div class="d-flex justify-content-between my-3">
         <h5>Attivita' Amici</h5>
@@ -193,21 +222,21 @@
     </aside>
   </div>
   <footer>
-    <div class="player">
+    <div class="player d-flex justify-content-between">
 
       <!-- Define the section for displaying details -->
       <div class="details d-flex">
-        <div class="track-art"></div>
-        <div class="container d-flex flex-column">
+        <div class="track-art">IMMAGINE</div>
+        <div class="container d-flex flex-column align-items-center justify-content-center">
           <div class="track-name">Track Name</div>
           <div class="track-artist">Track Artist</div>
         </div>
 
       </div>
 
-      <div class="container d-flex flex-column">
+      <div class="d-flex flex-column">
         <!-- Define the section for displaying track buttons -->
-        <div class="buttons">
+        <div class="buttons d-flex align-items-center justify-content-center">
           <div class="prev-track" onclick="prevTrack()">
             <i class="fa fa-step-backward fa-2x"></i>
           </div>
@@ -220,7 +249,7 @@
         </div>
 
         <!-- Define the section for displaying the seek slider-->
-        <div class="slider_container">
+        <div class="slider_container d-flex">
           <div class="current-time">00:00</div>
           <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
           <div class="total-duration">00:00</div>
@@ -229,16 +258,17 @@
 
 
       <!-- Define the section for displaying the volume slider-->
-      <div class="slider_container">
-        <i class="fa fa-volume-down"></i>
-        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+      <div class="slider_container d-flex flex-row align-items-center justify-content-center">
         <i class="fa fa-volume-up"></i>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        
       </div>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+  <script src="assets/js/artist.js"></script>
 </body>
 
 </html>
