@@ -8,7 +8,6 @@ function caricaContenuto() {
         return response.json();
     }).then(function (json) {
         let band = json;
-        console.log(band.picture_xl)
         sup.innerHTML = `
             <div class='d-flex'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#00f" class="bi bi-patch-check-fill me-2 mt-1" viewBox="0 0 16 16">

@@ -1,7 +1,7 @@
 #main-artist{
     i.fa-play-circle{
         color: rgb(108, 212, 108);
-        background-color: #212121;
+        background-color: #0f0f0f;
         margin: 0;
     }
     #sez_inf{
@@ -39,12 +39,15 @@
     #sez_sup{
         color: rgb(255, 255, 255);
         text-shadow: 4px 4px 10px black;
-        height: 40%;
+        height: 45%;
         padding-left: 20px;
         margin: 0;
         h1{
             font-size: 5rem;
             font-weight: 700;
+        }
+        p{
+            font-weight: 700;  
         }
     }  
 }

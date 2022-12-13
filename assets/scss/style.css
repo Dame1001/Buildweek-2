@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 #main-artist i.fa-play-circle {
   color: rgb(108, 212, 108);
-  background-color: #212121;
+  background-color: #0f0f0f;
   margin: 0;
 }
 #main-artist #sez_inf h3 {
@@ -31,12 +31,15 @@
 #main-artist #sez_sup {
   color: rgb(255, 255, 255);
   text-shadow: 4px 4px 10px black;
-  height: 40%;
+  height: 45%;
   padding-left: 20px;
   margin: 0;
 }
 #main-artist #sez_sup h1 {
   font-size: 5rem;
+  font-weight: 700;
+}
+#main-artist #sez_sup p {
   font-weight: 700;
 }
 
@@ -46,8 +49,8 @@
 
 body {
   font-family: "Lato", sans-serif;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
 }
 
 nav {
@@ -144,6 +147,7 @@ main .card-b {
 #main-album,
 #main-artist {
     background-color: #212121;
+    background: linear-gradient(to bottom, #212121, #0f0f0f, #212121);
   }
 }
 aside {
@@ -171,7 +175,7 @@ aside ul p {
 }
 
 footer {
-  padding: 15px 0;
+  padding: 10px 0px;
   background-color: #181818;
   color: white;
 }
