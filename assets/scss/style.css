@@ -61,6 +61,14 @@ body {
   width: 100vw;
 }
 
+@media screen and (min-width: 992px) {
+  #main-home,
+#main-album,
+#main-artist {
+    background-color: #212121;
+    background: linear-gradient(to bottom, #212121, #0f0f0f, #212121);
+  }
+}
 nav {
   background-color: rgba(0, 0, 0, 0.495);
   color: white;
@@ -150,14 +158,6 @@ main .card-b {
   }
 }
 
-@media screen and (min-width: 992px) {
-  #main-home,
-#main-album,
-#main-artist {
-    background-color: #212121;
-    background: linear-gradient(to bottom, #212121, #0f0f0f, #212121);
-  }
-}
 aside {
   background-color: black;
   color: white;
