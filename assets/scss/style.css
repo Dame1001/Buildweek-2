@@ -57,6 +57,51 @@ nav #likes {
   padding: 1px 6px 2px;
   background-image: linear-gradient(to bottom right, rgb(82, 25, 189), rgb(250, 244, 255));
 }
+nav #bookmark {
+  padding: 0px 4px 2px 5px;
+  background-color: darkgreen;
+  color: lightgreen;
+}
+
+#scroll {
+  overflow-y: scroll;
+  height: 360px;
+}
+
+#scroll::-webkit-scrollbar {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: grey;
+}
+
+#scroll-table {
+  overflow-y: scroll;
+  height: 360px;
+}
+
+#scroll-table::-webkit-scrollbar {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+#scroll-table::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.295);
+}
+
+.img-piccola {
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+}
+
+#main-album {
+  background: linear-gradient(180deg, #ceb558, #000);
+}
 
 @media screen and (min-width: 992px) {
   #nav {
