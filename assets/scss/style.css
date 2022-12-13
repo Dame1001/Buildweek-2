@@ -114,15 +114,28 @@ main {
   color: white;
 }
 main .card {
-  background-color: black;
+  background-color: #181818;
 }
 main .card img {
   height: 80px;
   width: 80px;
 }
+main #card-grande {
+  background-image: linear-gradient(to top right, black, #1d1d1d);
+}
+main #immagine-card-grande {
+  height: 150px;
+  width: 150px;
+}
+main .card-b {
+  background-color: black;
+}
 @media screen and (min-width: 992px) {
   main .card {
-    background-color: #2b2b2b;
+    background-color: #242424;
+  }
+  main .card-b {
+    background-color: #2c2c2c;
   }
 }
 
@@ -170,6 +183,7 @@ footer .player {
 }
 footer .details {
   justify-content: center;
+  width: 18vw;
 }
 footer .track-art {
   height: 50px;
@@ -177,14 +191,11 @@ footer .track-art {
   background-position: center;
   border-radius: 15%;
 }
-footer .now-playing {
-  font-size: 1rem;
-}
 footer .track-name {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 footer .track-artist {
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 footer .playpause-track,
 footer .prev-track,

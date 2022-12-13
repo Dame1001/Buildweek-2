@@ -90,17 +90,30 @@ main {
     color: white;
 
     .card {
-        background-color: black;
+        background-color: #181818;
 
         img {
             height: 80px;
             width: 80px;
         }
     }
-
+    #card-grande{
+        background-image: linear-gradient(to top right,black,#1d1d1d);
+    }
+    
+    #immagine-card-grande{
+        height: 150px;
+            width: 150px;
+    }
+    .card-b{
+        background-color: black;
+    }
     @media screen and (min-width:992px) {
-        .card {
-            background-color: #2b2b2b;
+        .card{
+            background-color: #242424;
+        }
+        .card-b {
+            background-color: #2c2c2c;
         }
     }
 }
@@ -166,6 +179,7 @@ footer {
 
     .details {
         justify-content: center;
+       width: 18vw;
     }
 
     .track-art {
@@ -175,16 +189,12 @@ footer {
         border-radius: 15%;
     }
 
-    .now-playing {
-        font-size: 1rem;
-    }
-
     .track-name {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .track-artist {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 
     .playpause-track,

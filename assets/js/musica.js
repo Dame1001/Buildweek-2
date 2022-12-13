@@ -55,7 +55,7 @@ function caricaContenuto() {
             // Update details of the track
             track_art.style.backgroundImage =
                 `url(" ${track_list[track_index].album.cover} ")`;
-            track_name.textContent = track_list[track_index].title;
+            track_name.textContent = track_list[track_index].title_short;
             track_artist.textContent = track_list[track_index].artist.name;
 
             // Set an interval of 1000 milliseconds
