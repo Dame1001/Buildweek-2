@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    height: 3000px;
 }
 
 // @media screen and (max-width:768px) {
@@ -113,7 +114,9 @@ aside {
 //     }
 // }
 footer {
-    background-color: red;
+    padding: 15px 0;
+    background-color: #181818;
+    color: white;
     .player {
         height: 10vh;
         width: 100vw;
@@ -137,11 +140,11 @@ footer {
     }
 
     .track-name {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .track-artist {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .playpause-track,
@@ -159,10 +162,13 @@ footer {
     }
 
     .slider_container {
-        width: 60vw;
-        max-width: 400px;
+        width: 20vw;
         justify-content: center;
         align-items: center;
+    }
+
+    #container-duration{
+        width: 40vw;
     }
 
     .seek_slider,
@@ -195,11 +201,11 @@ footer {
     }
 
     .seek_slider {
-        width: 50vw;
+        width: 40vw;
     }
 
     .volume_slider {
-        width: 20vw;
+        width: 10vw;
     }
 
     .current-time,

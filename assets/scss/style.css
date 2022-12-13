@@ -5,6 +5,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  height: 3000px;
 }
 
 nav {
@@ -39,16 +40,12 @@ main .card img {
 }
 
 @media screen and (min-width: 992px) {
-  #main-home, #main-album, #main-artist {
+  #main-home,
+#main-album,
+#main-artist {
     background-color: #212121;
   }
 }
-@media screen and (max-width: 992px) {
-  .mostra_tabella {
-    display: none;
-  }
-}
-
 aside {
   width: 20vw;
   background-color: black;
@@ -72,4 +69,95 @@ aside ul p {
   padding: 0;
   font-size: 0.6rem;
   color: rgba(238, 238, 238, 0.856);
+}
+
+footer {
+  padding: 15px 0;
+  background-color: #181818;
+  color: white;
+}
+footer .player {
+  height: 10vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .details {
+  justify-content: center;
+}
+footer .track-art {
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  border-radius: 15%;
+}
+footer .now-playing {
+  font-size: 1rem;
+}
+footer .track-name {
+  font-size: 2rem;
+}
+footer .track-artist {
+  font-size: 1rem;
+}
+footer .playpause-track,
+footer .prev-track,
+footer .next-track {
+  padding: 10px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+footer .playpause-track:hover,
+footer .prev-track:hover,
+footer .next-track:hover {
+  opacity: 1;
+}
+footer .slider_container {
+  width: 20vw;
+  justify-content: center;
+  align-items: center;
+}
+footer #container-duration {
+  width: 40vw;
+}
+footer .seek_slider,
+footer .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+footer .seek_slider::-webkit-slider-thumb,
+footer .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+footer .seek_slider:hover,
+footer .volume_slider:hover {
+  opacity: 1;
+}
+footer .seek_slider {
+  width: 40vw;
+}
+footer .volume_slider {
+  width: 10vw;
+}
+footer .current-time,
+footer .total-duration {
+  padding: 10px;
+}
+footer i.fa-play-circle,
+footer i.fa-pause-circle,
+footer i.fa-step-forward,
+footer i.fa-step-backward {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
