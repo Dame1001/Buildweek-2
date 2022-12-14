@@ -27,7 +27,7 @@ async function caricaContenuto() {
             <p class="card-text">${annuncio.artist.name}</p>
             <p class="card-text">Ascolta il nuovo album di: ${annuncio.artist.name}</p>
             <div class="d-flex flex-start">
-                <button class="me-3" id="button1">Play</button>
+                <button class="me-3" id="button1" onclick="getId(${annuncio.id})">Play</button>
                 <button class="me-3" id="button2"><b>Salva</b></button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff"
                 class="bi bi-three-dots align-self-center" viewBox="0 0 16 16">
@@ -42,7 +42,7 @@ async function caricaContenuto() {
         <div class="col-6 col-lg-4">
             
                 <div class="card d-flex flex-row my-3 manina" onclick="getId(${elem.id})">
-                    <img src="${elem.cover_small}" class="card-img-left" alt="#">
+                    <img src="${elem.cover_big}" class="card-img-left" alt="#">
                     <div class="card-body d-flex align-items-center">
                         <p class="card-text">${elem.title}</p>
                     </div>
@@ -55,7 +55,7 @@ async function caricaContenuto() {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
             <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
-                <img src="${albums[i].cover_small}" class="card-img-top" alt="#">
+                <img src="${albums[i].cover_big}" class="card-img-top" alt="#">
                 <h5 class="card-title">${albums[i].title}</h5>
                 <p class="card-text">${albums[i].artist.name}</p>
             </div>
@@ -66,7 +66,7 @@ async function caricaContenuto() {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
             <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
-                <img src="${albums[i].cover_small}" class="card-img-top" alt="#">
+                <img src="${albums[i].cover_big}" class="card-img-top" alt="#">
                 <h5 class="card-title">${albums[i].title}</h5>
                 <p class="card-text">${albums[i].artist.name}</p>
             </div>
