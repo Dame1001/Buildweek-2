@@ -98,7 +98,7 @@ nav {
 
 #scroll-main {
     overflow-y: scroll;
-    height: 85vh;
+    height: 90vh;
     padding-top: 1em;
 }
 #scroll-main::-webkit-scrollbar {
@@ -137,6 +137,9 @@ nav {
     #nav {
         background-color: black;
     }
+}
+.pagina{
+    height: 100vh;
 }
 
 main {
