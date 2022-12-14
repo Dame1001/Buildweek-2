@@ -21,9 +21,9 @@ let updateTimer;
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
 var session = sessionStorage.getItem('album');
-if (!session) {
-    session = 75621062;
-}
+// if (!session) {
+//     session = 75621062;
+// }
 function caricaMusica(track_index,controllo) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${session}`).then(function (response) {
         return response.json();
