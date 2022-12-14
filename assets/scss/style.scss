@@ -90,6 +90,7 @@ nav {
 #scroll::-webkit-scrollbar {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: transparent;
+    width: 15px;
 }
 #scroll::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -98,10 +99,12 @@ nav {
 
 #scroll-main {
     overflow-y: scroll;
-    height: 85vh;
+    height: 90vh;
+    padding-top: 1em;
 }
 #scroll-main::-webkit-scrollbar {
     background-color: transparent;
+    width: 15px;
 }
 #scroll-main::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -118,12 +121,18 @@ nav {
     height: 30px;
 }
 
-#main-album {
-    background: linear-gradient(180deg, #ceb558, #000);
+.like{
+    width: 6vw;
 }
 
-#album_head {
-    margin-top: 60px;
+@media screen and(max-width: 992px){
+    .like{
+        width: 200px
+    }
+}
+
+#main-album {
+    background: linear-gradient(180deg, #ceb558, #000);
 }
 // @media screen and (max-width:768px) {
 //     nav{
@@ -153,7 +162,7 @@ main {
     .card {
         background-color: #181818;
 
-        img {
+        .card-img-left {
             height: 80px;
             width: 80px;
         }
@@ -171,7 +180,7 @@ main {
     }
     #button1{
         color: black;
-        background-color: #1DB954;
+        background-color: #1ed760;
         border-radius: 25px;
         border: none;
         padding: 10px 35px;
