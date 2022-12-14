@@ -33,7 +33,7 @@ function caricaContenuto() {
                     <td><img src="${album.data[i].album.cover_small}" alt="cover-album"></td>
                     <td><h4 class="m-0">${album.data[i].title}</h4></td>
                     <td class="text-end mostra_tabella"><p class="m-0">${album.data[i].rank}</p></td>
-                    <td class="text-end mostra_tabella"><p class="m-0">${album.data[i].duration}</p></td>
+                    <td class="text-end mostra_tabella d-none d-lg-table-cell"><p class="m-0">${album.data[i].duration}</p></td>
                 </tr>`
         };
         prof.innerHTML = `
