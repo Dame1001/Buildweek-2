@@ -54,10 +54,10 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
-                <img src="${albums[i].cover_big}" class="card-img-top" alt="#">
-                <h5 class="card-title">${albums[i].title}</h5>
-                <p class="card-text">${albums[i].artist.name}</p>
+            <div class="card d-flex justify-content-center align-items-center manina">
+                <img src="${albums[i].cover_big}" class="card-img-top" alt="#" onclick="getId(${albums[i].id})">
+                <h5 class="card-title" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+                <p class="card-text" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>
         </div>
         `
@@ -65,10 +65,10 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
-                <img src="${albums[i].cover_big}" class="card-img-top" alt="#">
-                <h5 class="card-title">${albums[i].title}</h5>
-                <p class="card-text">${albums[i].artist.name}</p>
+            <div class="card d-flex justify-content-center align-items-center manina">
+                <img src="${albums[i].cover_big}" class="card-img-top" alt="#" onclick="getId(${albums[i].id})">
+                <h5 class="card-title" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+                <p class="card-text" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>
         </div>
         `
@@ -77,6 +77,11 @@ async function caricaContenuto() {
 
 function getId(id){
     window.location.href = "album.html"
+    sessionStorage.setItem('album', JSON.stringify(id))
+}
+
+function getIdArtist(id) {
+    window.location.href = "artist.html"
     sessionStorage.setItem('album', JSON.stringify(id))
 }
 

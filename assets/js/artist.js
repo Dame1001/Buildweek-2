@@ -3,8 +3,8 @@ function caricaContenuto() {
     const div = document.querySelector('tbody');
     const prof = document.querySelector('#band_profile');
     const sup = document.querySelector('#sez_sup');
-
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/1')
+    const session = sessionStorage.getItem('album');
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${session}`)
     .then(function(response) { 
     return response.json()
     })
