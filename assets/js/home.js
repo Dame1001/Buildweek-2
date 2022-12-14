@@ -29,7 +29,7 @@ async function caricaContenuto() {
             <p class="card-text">Ascolta il nuovo album di: <span class="manina" onclick="getIdArtist(${annuncio.artist.id})">${annuncio.artist.name}</span></p>
             <div class="d-flex flex-start">
                 <button class="me-3" id="button1" onclick="getId(${annuncio.id})">Play</button>
-                <button class="me-3" id="button2"><b>Salva</b></button>
+                <button class="me-3" id="button2" onclick="changeBtn()"><b>Salva</b></button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#fff"
                 class="bi bi-three-dots align-self-center" viewBox="0 0 16 16">
                 <path
@@ -84,6 +84,10 @@ function getId(id){
 function getIdArtist(id) {
     window.location.href = "artist.html"
     sessionStorage.setItem('album', JSON.stringify(id))
+}
+
+function changeBtn(){
+    document.querySelector('#button2').innerHTML = `<b>Salvato</b>`
 }
 
 async function chiamaJson(numero) {
