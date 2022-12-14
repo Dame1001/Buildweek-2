@@ -138,7 +138,6 @@ nav #bookmark {
 #scroll-main {
   overflow-y: scroll;
   height: 85vh;
-  padding-top: 1em;
 }
 
 #scroll-main::-webkit-scrollbar {
@@ -162,6 +161,10 @@ nav #bookmark {
 
 #main-album {
   background: linear-gradient(180deg, #ceb558, #000);
+}
+
+#album_head {
+  margin-top: 60px;
 }
 
 @media screen and (min-width: 992px) {
@@ -192,7 +195,7 @@ main #immagine-card-grande {
 }
 main #button1 {
   color: black;
-  background-color: #1ed760;
+  background-color: #1DB954;
   border-radius: 25px;
   border: none;
   padding: 10px 35px;
