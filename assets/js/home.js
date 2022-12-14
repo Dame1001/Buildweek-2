@@ -15,7 +15,8 @@ async function caricaContenuto() {
     sessionStorage.setItem('albums', JSON.stringify(albums));
     let prova = JSON.parse(sessionStorage.getItem('albums'));
     console.log(prova);
-    let annuncio = albums[0];
+    let random=Math.floor(Math.random()*6);
+    let annuncio = albums[random];
     cardGrande.innerHTML = `
     <img src="${annuncio.cover_big}" class="card-img-left" alt="#" id="immagine-card-grande">
         <div class="card-body d-flex flex-column">
@@ -24,8 +25,8 @@ async function caricaContenuto() {
                 <p id="p2">NASCONDI ANNUNCI</p>
             </div>
             <h3 class="card-title">${annuncio.title}</h3>
-            <p class="card-text">${annuncio.artist.name}</p>
-            <p class="card-text">Ascolta il nuovo album di: ${annuncio.artist.name}</p>
+            <p class="card-text manina" onclick="getIdArtist(${annuncio.artist.id})">${annuncio.artist.name}</p>
+            <p class="card-text">Ascolta il nuovo album di: <span class="manina" onclick="getIdArtist(${annuncio.artist.id})">${annuncio.artist.name}</span></p>
             <div class="d-flex flex-start">
                 <button class="me-3" id="button1" onclick="getId(${annuncio.id})">Play</button>
                 <button class="me-3" id="button2"><b>Salva</b></button>

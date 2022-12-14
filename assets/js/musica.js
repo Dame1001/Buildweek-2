@@ -20,8 +20,12 @@ let updateTimer;
 
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
-function caricaContenuto() {
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/album/75621062').then(function (response) {
+var session = sessionStorage.getItem('album');
+if(!session){
+    session=75621062;
+}
+function caricaMusica(track_index) {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${session}`).then(function (response) {
         return response.json();
     }).then(function (json) {
         var track_list = json.tracks.data;
@@ -49,6 +53,7 @@ function caricaContenuto() {
             resetValues();
 
             // Load a new track
+            console.log(track_list[track_index])
             curr_track.src = track_list[track_index].preview;
             curr_track.load();
 
@@ -186,5 +191,4 @@ function caricaContenuto() {
 // Load the first track in the tracklist
 
 }
-
-caricaContenuto();
+window.addEventListener('load',caricaMusica)
