@@ -20,7 +20,7 @@ function caricaContenuto() {
                 <h1 class="card-title pt-1 pb-4">${album.title}</h1>
                 <div class="card-text w-100 d-flex"><img src="${album.contributors[0].picture_small}" class="img-piccola"
                     alt="#">
-                <p class="card-text ps-2">${album.artist.name} - ${year} - ${album.nb_tracks} brani,  ${minuti}min ${secondi}sec.</p>
+                <p class="card-text ps-2"><span class="manina" onclick="getIdArtist(${album.artist.id})"> ${album.artist.name}</span> - ${year} - ${album.nb_tracks} brani,  ${minuti}min ${secondi}sec.</p>
                 </div>
 
             </div>
@@ -31,7 +31,7 @@ function caricaContenuto() {
             div.innerHTML +=
                 `<tr>
                     <td class="text-end mostra_tabella">${i + 1}</td>
-                    <td><p class="m-0 fw-bold">${album.tracks.data[i].title}</p><p class="m-0 fw-light">${album.tracks.data[i].artist.name}</p></td>
+                    <td><p class="m-0 fw-bold">${album.tracks.data[i].title}</p><p class="m-0 fw-light manina" onclick="getIdArtist(${album.artist.id})">${album.tracks.data[i].artist.name}</p></td>
                     <td class="text-end mostra_tabella">${album.tracks.data[i].rank}</td>
                     <td class="text-end d-lg-none text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -43,4 +43,9 @@ function caricaContenuto() {
 
         }
     });
+}
+
+function getIdArtist(id) {
+    window.location.href = "artist.html"
+    sessionStorage.setItem('album', JSON.stringify(id))
 }
