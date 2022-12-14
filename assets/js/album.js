@@ -28,6 +28,11 @@ function caricaContenuto() {
         </div>
         `
         for (let i = 0; i < album.tracks.data.length; i++) {
+            let minuti2 = Math.floor(album.tracks.data[i].duration / 60);
+            let secondi2 = album.tracks.data[i].duration % 60;
+            if(secondi2<10){
+                secondi2=`0${secondi2}`;
+            }
             div.innerHTML +=
                 `<tr>
                     <td class="text-end mostra_tabella">${i + 1}</td>
@@ -38,7 +43,7 @@ function caricaContenuto() {
                      <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                     </svg>
                     </td>
-                    <td class="text-end mostra_tabella">${album.tracks.data[i].duration}</td>
+                    <td class="text-end mostra_tabella">${minuti2}:${secondi2}</td>
                 </tr>`
 
         }

@@ -74,9 +74,9 @@ async function caricaContenuto() {
     }
     for (let i = 0; i < albums.length; i++) {
         divSecondeCard.innerHTML += `
-        <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina h-100">
-                <img src="${albums[i].cover_big}" class="card-img-top like pt-3" alt="#" onclick="getId(${albums[i].id})">
+        <div class="col-12 col-lg-2 my-3 d-flex flex-column">
+            <div class="card d-flex flex-row flex-lg-column justify-content-center align-items-center manina h-100">
+                <img src="${albums[i].cover_medium}" class="card-img-top mb-1" alt="#" onclick="getId(${albums[i].id})">
                 <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
                 <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>
@@ -86,8 +86,8 @@ async function caricaContenuto() {
     for (let i = 0; i < albums.length; i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina h-100">
-                <img src="${albums[i].cover_big}" class="card-img-top like pt-3" alt="#" onclick="getId(${albums[i].id})">
+            <div class="card d-flex flex-lg-column justify-content-center align-items-center manina h-100">
+                <img src="${albums[i].cover_medium}" class="card-img-top mb-1" alt="#" onclick="getId(${albums[i].id})">
                 <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
                 <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>

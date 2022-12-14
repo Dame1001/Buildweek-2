@@ -28,13 +28,18 @@ function caricaContenuto() {
         })
         .then(function (album) {
             for (let i = 0; i < album.data.length; i++) {
+                let minuti2 = Math.floor(album.data[i].duration / 60);
+                let secondi2 = album.data[i].duration % 60;
+                if(secondi2<10){
+                secondi2=`0${secondi2}`;
+                }
                 div.innerHTML +=
                     `<tr>
                     <td class="text-end mostra_tabella"><h5 class="m-0">${i + 1}</h5></td>
                     <td><img src="${album.data[i].album.cover_small}" alt="cover-album"></td>
                     <td><h4 class="m-0 manina" onclick="chiamataCanzone(${i})">${album.data[i].title}</h4></td>
                     <td class="text-end mostra_tabella"><p class="m-0">${album.data[i].rank}</p></td>
-                    <td class="text-end mostra_tabella d-none d-lg-table-cell"><p class="m-0">${album.data[i].duration}</p></td>
+                    <td class="text-end mostra_tabella d-none d-lg-table-cell"><p class="m-0">${minuti2}:${secondi2}</p></td>
                 </tr>`
             };
             prof.innerHTML = `
@@ -72,6 +77,7 @@ button.addEventListener('click', () => {
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
 let track_artist = document.querySelector(".track-artist");
+let iconaPlay=document.querySelector('#icona-play')
 
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
@@ -105,6 +111,9 @@ function caricaMusica(track_index, controllo) {
             var track_list = album.data;
             console.log(track_list);
             playpause_btn.addEventListener('click', () => {
+                playpauseTrack();
+            })
+            iconaPlay.addEventListener('click', () => {
                 playpauseTrack();
             })
             seek_slider.addEventListener('change', () => {
@@ -186,6 +195,9 @@ function caricaMusica(track_index, controllo) {
 
                 // Replace icon with the pause icon
                 playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-2x"></i>';
+                iconaPlay.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="rgb(108, 212, 108)" class="bi bi-pause-circle-fill text-success me-5 manina" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5zm3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5z"/>
+                </svg>`
             }
 
             function pauseTrack() {
@@ -195,6 +207,11 @@ function caricaMusica(track_index, controllo) {
 
                 // Replace icon with the play icon
                 playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-2x"></i>';
+                iconaPlay.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="rgb(108, 212, 108)"
+                class="bi bi-play-circle-fill text-success me-5 manina" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+              </svg>`
             }
 
             function nextTrack() {
