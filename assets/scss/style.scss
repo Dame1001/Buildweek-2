@@ -96,17 +96,22 @@ nav {
     background-color: grey;
 }
 
-#scroll-table {
+#scroll-main {
     overflow-y: scroll;
-    height: 360px;
+    height: 100vh;
+    margin-top: 1em;
 }
-#scroll-table::-webkit-scrollbar {
+#scroll-main::-webkit-scrollbar {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: transparent;
 }
-#scroll-table::-webkit-scrollbar-thumb {
+#scroll-main::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: rgba(0, 0, 0, 0.295);
+}
+
+.manina {
+    cursor: pointer;
 }
 
 .img-piccola {
