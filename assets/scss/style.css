@@ -308,6 +308,7 @@ footer .slider_container {
 }
 footer #container-duration {
   width: 40vw;
+  margin-top: -20px;
 }
 footer .seek_slider,
 footer .volume_slider {

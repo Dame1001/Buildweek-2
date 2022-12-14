@@ -21,42 +21,45 @@ let updateTimer;
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
 var session = sessionStorage.getItem('album');
-if(!session){
-    session=75621062;
+if (!session) {
+    session = 75621062;
 }
-function caricaMusica(track_index) {
+function caricaMusica(track_index,controllo) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${session}`).then(function (response) {
         return response.json();
     }).then(function (json) {
         var track_list = json.tracks.data;
-        
-        playpause_btn.addEventListener('click',()=>{
+
+        playpause_btn.addEventListener('click', () => {
             playpauseTrack();
         })
-        seek_slider.addEventListener('change',()=>{
+        seek_slider.addEventListener('change', () => {
             seekTo();
         })
-        volume_slider.addEventListener('change',()=>{
+        volume_slider.addEventListener('change', () => {
             setVolume();
         })
-        next_btn.addEventListener('click',()=>{
+        next_btn.addEventListener('click', () => {
             nextTrack();
         })
-        prev_btn.addEventListener('click',()=>{
+        prev_btn.addEventListener('click', () => {
             prevTrack();
         })
-        console.log(track_list[0]);
-
+        if(controllo!=1)
+        {
+            track_index=0;
+        }
         function loadTrack(track_index) {
             // Clear the previous seek timer
             clearInterval(updateTimer);
             resetValues();
 
             // Load a new track
-            console.log(track_list[track_index])
             curr_track.src = track_list[track_index].preview;
             curr_track.load();
-
+            if(controllo==1){
+                playTrack();
+            }
             // Update details of the track
             track_art.style.backgroundImage =
                 `url(" ${track_list[track_index].album.cover} ")`;
@@ -100,7 +103,7 @@ function caricaMusica(track_index) {
             // Switch between playing and pausing
             // depending on the current state
             if (!isPlaying) playTrack();
-             else pauseTrack();
+            else pauseTrack();
         }
 
         function playTrack() {
@@ -188,7 +191,11 @@ function caricaMusica(track_index) {
         }
         loadTrack(track_index);
     })
-// Load the first track in the tracklist
-
+    // Load the first track in the tracklist
 }
-window.addEventListener('load',caricaMusica)
+function chiamataCanzone(variabile) {
+    caricaMusica(variabile,1)
+    caricaMusica(variabile,1)
+    playTrack();
+}
+window.addEventListener('load', caricaMusica)
