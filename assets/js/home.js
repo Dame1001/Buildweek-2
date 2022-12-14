@@ -7,7 +7,6 @@ const cardGrande = document.getElementById('card-grande');
 
 window.addEventListener('load', caricaContenuto);
 async function caricaContenuto() {
-    
     for (let codice of codiciAlbum) {
         let result = await chiamaJson(codice);
         albums.push(result);
@@ -42,7 +41,7 @@ async function caricaContenuto() {
         divPrimeCard.innerHTML += `
         <div class="col-6 col-lg-4">
             
-                <div class="card d-flex flex-row my-3 manina">
+                <div class="card d-flex flex-row my-3 manina" onclick="getId(${elem.id})">
                     <img src="${elem.cover_small}" class="card-img-left" alt="#">
                     <div class="card-body d-flex align-items-center">
                         <p class="card-text">${elem.title}</p>
@@ -55,7 +54,7 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina">
+            <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
                 <img src="${albums[i].cover_small}" class="card-img-top" alt="#">
                 <h5 class="card-title">${albums[i].title}</h5>
                 <p class="card-text">${albums[i].artist.name}</p>
@@ -66,7 +65,7 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina">
+            <div class="card d-flex justify-content-center align-items-center manina" onclick="getId(${albums[i].id})">
                 <img src="${albums[i].cover_small}" class="card-img-top" alt="#">
                 <h5 class="card-title">${albums[i].title}</h5>
                 <p class="card-text">${albums[i].artist.name}</p>
@@ -74,6 +73,11 @@ async function caricaContenuto() {
         </div>
         `
     }
+}
+
+function getId(id){
+    window.location.href = "album.html"
+    sessionStorage.setItem('album', JSON.stringify(id))
 }
 
 async function chiamaJson(numero) {

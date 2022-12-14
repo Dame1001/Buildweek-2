@@ -1,7 +1,8 @@
 window.addEventListener('load', caricaContenuto);
 function caricaContenuto() {
     const div = document.querySelector('tbody');
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/album/75621062').then(function (response) {
+    const session = sessionStorage.getItem('album')
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${session}`).then(function (response) {
         return response.json();
     }).then(function (json) {
         let album = json;
