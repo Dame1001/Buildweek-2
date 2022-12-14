@@ -43,8 +43,8 @@ async function caricaContenuto() {
             
                 <div class="card d-flex flex-row my-3 manina" onclick="getId(${elem.id})">
                     <img src="${elem.cover_big}" class="card-img-left" alt="#">
-                    <div class="card-body d-flex align-items-center">
-                        <p class="card-text">${elem.title}</p>
+                    <div class="card-body d-flex align-items-center w-75">
+                        <p class="card-text text-truncate w-75">${elem.title}</p>
                     </div>
                 </div>
             
@@ -54,10 +54,10 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina">
-                <img src="${albums[i].cover_big}" class="card-img-top" alt="#" onclick="getId(${albums[i].id})">
-                <h5 class="card-title" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
-                <p class="card-text" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
+            <div class="card d-flex justify-content-center align-items-center manina h-100">
+                <img src="${albums[i].cover_big}" class="card-img-top like pt-3" alt="#" onclick="getId(${albums[i].id})">
+                <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+                <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>
         </div>
         `
@@ -65,10 +65,10 @@ async function caricaContenuto() {
     for (let i=0;i<albums.length;i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex justify-content-center align-items-center manina">
-                <img src="${albums[i].cover_big}" class="card-img-top" alt="#" onclick="getId(${albums[i].id})">
-                <h5 class="card-title" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
-                <p class="card-text" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
+            <div class="card d-flex justify-content-center align-items-center manina h-100">
+                <img src="${albums[i].cover_big}" class="card-img-top like pt-3" alt="#" onclick="getId(${albums[i].id})">
+                <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+                <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
             </div>
         </div>
         `

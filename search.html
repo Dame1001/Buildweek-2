@@ -298,15 +298,15 @@
     </aside>
 
   </div>
-  <footer class="fixed-bottom col-12">
-    <div class="player d-flex justify-content-between">
+  <footer class="fixed-bottom d-flex justify-content-center align-items-center" id="footer-home">
+    <div class="player d-flex justify-content-center justify-content-lg-between">
 
       <!-- Define the section for displaying details -->
       <div class="details d-flex">
-        <div class="track-art"></div>
-        <div class="container d-flex flex-row flex-lg-column align-items-center justify-content-center">
-          <div class="track-name">Track Name</div>
-          <div class="track-artist">Track Artist</div>
+        <div class="track-art d-none d-lg-block"></div>
+        <div class="container d-flex flex-lg-column align-items-center justify-content-center">
+          <div class="track-name text-truncate">Track Name</div>
+          <div class="track-artist d-none d-lg-block">Track Artist</div>
         </div>
 
       </div>
@@ -338,7 +338,7 @@
       <div class="slider_container d-flex flex-row align-items-center justify-content-center d-none d-lg-block">
         <i class="fa fa-volume-up"></i>
         <input type="range" min="1" max="100" value="99" class="volume_slider styled-slider slider-progress">
-        
+
       </div>
     </div>
   </footer>
