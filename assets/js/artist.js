@@ -64,7 +64,7 @@ button.addEventListener('click', () => {
         counter = 1
         button.classList.remove('on')
     } else {
-        button.textContent = 'Follow'
+        button.textContent = 'Segui'
         counter = 0
         button.classList.add('on')
     }
