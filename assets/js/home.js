@@ -1,5 +1,6 @@
 var albums = [];
-const codiciAlbum = [5327691, 363906907, 217489292, 359324967, 313482367, 65373012];
+const codiciAlbum = [454050,340878,86511,212377,14400134,8887733,226383,721846,8524915,217281,14581358,98304,91258,81827,1262014,72487842
+    ,8015598,7821476];
 const divPrimeCard = document.getElementById('popolaPrimeCard');
 const divSecondeCard = document.getElementById('popolaSecondeCard');
 const cardGrande = document.getElementById('card-grande');
@@ -35,7 +36,7 @@ async function caricaContenuto() {
     // sessionStorage.setItem('albums', JSON.stringify(albums));
     // let prova = JSON.parse(sessionStorage.getItem('albums'));
     // console.log(prova);
-    let random = Math.floor(Math.random() * 6);
+    let random = Math.floor(Math.random() * 18);
     let annuncio = albums[random];
     cardGrande.innerHTML = `
     <img src="${annuncio.cover_big}" class="card-img-left" alt="#" id="immagine-card-grande">
@@ -58,21 +59,21 @@ async function caricaContenuto() {
             </div>
         </div>
     `
-    for (let elem of albums) {
+    for (let i=0; i<albums.length/3;i++) {
         divPrimeCard.innerHTML += `
         <div class="col-6 col-lg-4">
             
-                <div class="card d-flex flex-row my-3 manina" onclick="getId(${elem.id})">
-                    <img src="${elem.cover_big}" class="card-img-left" alt="#">
+                <div class="card d-flex flex-row my-3 manina" onclick="getId(${albums[i].id})">
+                    <img src="${albums[i].cover_big}" class="card-img-left" alt="#">
                     <div class="card-body d-flex align-items-center w-75">
-                        <p class="card-text text-truncate w-75">${elem.title}</p>
+                        <p class="card-text text-truncate w-75">${albums[i].title}</p>
                     </div>
                 </div>
             
         </div>
         `
     }
-    for (let i = 0; i < albums.length; i++) {
+    for (let i = albums.length/3; i < albums.length; i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3 d-flex flex-column">
             <div class="card d-flex flex-row flex-lg-column justify-content-center align-items-center manina h-100">
@@ -83,17 +84,17 @@ async function caricaContenuto() {
         </div>
         `
     }
-    for (let i = 0; i < albums.length; i++) {
-        divSecondeCard.innerHTML += `
-        <div class="col-12 col-lg-2 my-3">
-            <div class="card d-flex flex-lg-column justify-content-center align-items-center manina h-100">
-                <img src="${albums[i].cover_medium}" class="card-img-top mb-1" alt="#" onclick="getId(${albums[i].id})">
-                <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
-                <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
-            </div>
-        </div>
-        `
-    }
+    // for (let i = 0; i < albums.length; i++) {
+    //     divSecondeCard.innerHTML += `
+    //     <div class="col-12 col-lg-2 my-3">
+    //         <div class="card d-flex flex-lg-column justify-content-center align-items-center manina h-100">
+    //             <img src="${albums[i].cover_medium}" class="card-img-top mb-1" alt="#" onclick="getId(${albums[i].id})">
+    //             <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+    //             <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
+    //         </div>
+    //     </div>
+    //     `
+    // }
     caricaMusicaAlbumAnnuncio(annuncio);
 }
 function caricaMusicaAlbumAnnuncio(album) {
@@ -124,7 +125,7 @@ function caricaMusicaAlbumAnnuncio(album) {
         curr_track.load();
         // Update details of the track
         track_art.style.backgroundImage =
-            `url(" ${track_list[track_index].album.cover} ")`;
+            `url(" ${track_list[track_index].album.cover_small} ")`;
         track_name.textContent = track_list[track_index].title_short;
         track_artist.textContent = track_list[track_index].artist.name;
 
