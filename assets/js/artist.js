@@ -295,4 +295,16 @@ function getId(id) {
 function chiamaRicerca(){
     window.location.href = "search.html"
 }
+function coloraVerde(cuore) {
+    if (cuore.classList.contains('verdino')) {
+        cuore.classList.remove('verdino');
+        cuore.classList.remove('bi-heart-fill');
+        cuore.classList.add('bi-heart');
+    }
+    else {
+        cuore.classList.add('verdino');
+        cuore.classList.remove('bi-heart');
+        cuore.classList.add('bi-heart-fill');
+    }
+}
 window.addEventListener('load', caricaMusica)

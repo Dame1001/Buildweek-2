@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/scss/style.css">
 </head>
 
@@ -48,7 +49,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <div class="d-flex">
+          <div class="d-flex flex-column flex-lg-row">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
               class="bi bi-house-door-fill align-self-center" viewBox="0 0 16 16">
               <path
@@ -58,7 +59,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <div class="d-flex" onclick="chiamaRicerca()">
+          <div class="d-flex flex-column flex-lg-row" onclick="chiamaRicerca()">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
               class="bi bi-search align-self-center" viewBox="0 0 16 16">
               <path
@@ -68,7 +69,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <div class="d-flex">
+          <div class="d-flex flex-column flex-lg-row">
             <svg width="25" height="25" fill="none" class="align-self-center" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M7 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5zm4 0H9v14h2V5z" fill="#fff" />
@@ -276,17 +277,29 @@
     </aside>
   </div>
 
-  <footer class="fixed-bottom d-flex justify-content-center align-items-center" id="footer-home">
-    <div class="player d-flex justify-content-center justify-content-lg-between">
-
+  <footer class="fixed-bottom d-flex justify-content-center align-items-center " id="footer-home">
+    <div class="player d-flex justify-content-center justify-content-lg-around">
       <!-- Define the section for displaying details -->
-      <div class="details d-flex">
+      <div class="details d-flex text-center align-items-center" id="footer-contenitore">
         <div class="track-art d-none d-lg-block"></div>
         <div class="container d-flex flex-lg-column align-items-center justify-content-center">
           <div class="track-name text-truncate">Track Name</div>
           <div class="track-artist d-none d-lg-block">Track Artist</div>
         </div>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+          class="bi bi-music-player-fill d-lg-none me-2" viewBox="0 0 16 16">
+          <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+          <path
+            d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm1 2h6a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+        </svg>
+        <div>
+          <i class="bi bi-heart fa-2x me-4 me-lg-0" onclick="coloraVerde(this)"></i>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart heart_spoty"
+            viewBox="0 0 16 16">
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          </svg> -->
+        </div>
       </div>
 
       <div class="d-flex flex-column">
@@ -314,8 +327,30 @@
 
       <!-- Define the section for displaying the volume slider-->
       <div class="slider_container d-flex flex-row align-items-center justify-content-center d-none d-lg-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic"
+          viewBox="0 0 16 16">
+          <path
+            d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+          <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-music-player-fill" viewBox="0 0 16 16">
+          <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+          <path
+            d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm1 2h6a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+        </svg>
         <i class="fa fa-volume-up"></i>
         <input type="range" min="1" max="100" value="99" class="volume_slider styled-slider slider-progress">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z" />
+        </svg>
 
       </div>
     </div>

@@ -114,6 +114,12 @@ nav {
     cursor: pointer;
 }
 
+.verdino{
+    // background-color: #1ed760;
+    color: #1ed760;
+    // fill: #1ed760 ;
+}
+
 .sottolinea:hover{
     text-decoration: underline;
 }
@@ -419,7 +425,7 @@ footer {
 @media screen and (max-width:992px) {
     footer{
         width: 94vw;
-        bottom: 95px!important;
+        bottom: 110px!important;
         height: 70px;
         margin: 0;
         padding: 0;

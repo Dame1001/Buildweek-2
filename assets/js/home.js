@@ -1,6 +1,6 @@
 var albums = [];
-const codiciAlbum = [454050,340878,86511,212377,14400134,8887733,226383,721846,8524915,217281,14581358,98304,91258,81827,1262014,72487842
-    ,8015598,7821476];
+const codiciAlbum = [454050, 340878, 86511, 212377, 14400134, 8887733, 226383, 721846, 8524915, 217281, 14581358, 98304, 91258, 81827, 1262014, 72487842
+    , 8015598, 7821476];
 const divPrimeCard = document.getElementById('popolaPrimeCard');
 const divSecondeCard = document.getElementById('popolaSecondeCard');
 const cardGrande = document.getElementById('card-grande');
@@ -59,7 +59,7 @@ async function caricaContenuto() {
             </div>
         </div>
     `
-    for (let i=0; i<albums.length/3;i++) {
+    for (let i = 0; i < albums.length / 3; i++) {
         divPrimeCard.innerHTML += `
         <div class="col-6 col-lg-4">
             
@@ -73,7 +73,7 @@ async function caricaContenuto() {
         </div>
         `
     }
-    for (let i = albums.length/3; i < albums.length; i++) {
+    for (let i = albums.length / 3; i < albums.length; i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3 d-flex flex-column">
             <div class="card d-flex flex-column">
@@ -85,11 +85,8 @@ async function caricaContenuto() {
                     </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center d-lg-none">
-                    <div class="d-flex justify-content-between m-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-heart"
-                        viewBox="0 0 16 16">
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                        </svg>
+                    <div class="d-flex align-items-center justify-content-between m-3">
+                    <i class="bi bi-heart fa-2x" onclick="coloraVerde(this)"></i>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots-vertical ms-5" viewBox="0 0 16 16">
                         <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                         </svg>
@@ -285,34 +282,46 @@ function changeBtn() {
     document.querySelector('#button2').innerHTML = `<b>Salvato</b>`
 }
 
-let cuore = document.querySelector('.fill_heart') 
-let counter = 0
-cuore.style.cursor = 'pointer'
-cuore.addEventListener('click', ()=>{
-    if (counter == 0) {
-        cuore.innerHTML = ` 
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1ed760" class="bi bi-heart-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-        </svg>
-        `
-        counter = 1
-    } else {
-        cuore.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart"
-              viewBox="0 0 16 16">
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-        </svg>
-        `
-        counter = 0
+// for(let i=0;i<cuore.length;i++){
+// cuore[i].style.cursor = 'pointer'
+// cuore_contenitore[i].addEventListener('click', ()=>{
+//     console.log(cuore[i].classList.contains('cane'))
+//     if (!cuore[i].classList.contains('cane')) {
+//         cuore_contenitore[i].innerHTML = ` 
+//         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1ed760" class="cane bi bi-heart-fill" viewBox="0 0 16 16">
+//         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+//         </svg>
+//         `
+//     } else {
+//         cuore_contenitore[i].innerHTML = `
+//         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart"
+//               viewBox="0 0 16 16">
+//               <path
+//                 d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+//         </svg>
+//         `
+//     }
+// })
+// }
+function coloraVerde(cuore) {
+    if (cuore.classList.contains('verdino')) {
+        cuore.classList.remove('verdino');
+        cuore.classList.remove('bi-heart-fill');
+        cuore.classList.add('bi-heart');
     }
-})
+    else {
+        cuore.classList.add('verdino');
+        cuore.classList.remove('bi-heart');
+        cuore.classList.add('bi-heart-fill');
+    }
+}
+
 
 async function chiamaJson(numero) {
     let obj = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${numero}`);
     return await obj.json();
 }
-function chiamaRicerca(){
+function chiamaRicerca() {
     window.location.href = "search.html"
 }
 
