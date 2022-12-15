@@ -53,7 +53,7 @@ header{
     }
     button{
         position: fixed;
-        right: 25vw;
+        right: 20vw;
         color: white;
         font-weight: 700;
         background-color: black;
@@ -114,6 +114,10 @@ nav {
     cursor: pointer;
 }
 
+.sottolinea:hover{
+    text-decoration: underline;
+}
+
 .img-piccola {
     width: 30px;
     border-radius: 50%;
@@ -157,7 +161,15 @@ main {
     // width: 50vw;
     background-color: black;
     color: white;
-
+    #cerca-barra{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        input{
+            background-color: #1b1b1b;
+            color: white;
+        }
+    }
     .card {
         background-color: #181818;
 

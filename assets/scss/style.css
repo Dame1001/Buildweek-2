@@ -93,7 +93,7 @@ header .svg-head-2 {
 }
 header button {
   position: fixed;
-  right: 25vw;
+  right: 20vw;
   color: white;
   font-weight: 700;
   background-color: black;
@@ -155,6 +155,10 @@ nav #bookmark {
   cursor: pointer;
 }
 
+.sottolinea:hover {
+  text-decoration: underline;
+}
+
 .img-piccola {
   width: 30px;
   border-radius: 50%;
@@ -185,6 +189,15 @@ nav #bookmark {
 
 main {
   background-color: black;
+  color: white;
+}
+main #cerca-barra {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+main #cerca-barra input {
+  background-color: #1b1b1b;
   color: white;
 }
 main .card {
