@@ -58,3 +58,7 @@ function getArtistId(id) {
     sessionStorage.setItem('album', JSON.stringify(id))
 }
 cercaArtista();
+
+function resetInput() {
+    document.querySelector('#cerca').value = ''
+}
