@@ -1,9 +1,9 @@
 function cercaArtista(){
 let ricerca=document.querySelector('#cerca')
 console.log(ricerca);
-ricerca.addEventListener("keyup",function(event){
-    // console.log(event.key)
-    // if(event.key === "Enter")
+ricerca.addEventListener("keydown",function(event){
+    console.log(event.key)
+    if(event.key === "Enter")
 {
     document.querySelector('#bottone-ricerca-search').click();
 }});
