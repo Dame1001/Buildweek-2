@@ -254,6 +254,7 @@ footer {
     padding: 10px 0px;
     background-color: #181818;
     color: white;
+    
     .player {
         height: 10vh;
         width: 100vw;
@@ -385,6 +386,11 @@ footer {
         margin-right: 3vw;
         margin-left: 3vw;
         background-color: #262626;
+    }
+}
+@media screen and (max-width:992px) {
+    #footer-contenitore{
+        min-width: ;
     }
 }
 
