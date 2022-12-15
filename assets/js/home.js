@@ -273,4 +273,7 @@ async function chiamaJson(numero) {
     let obj = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${numero}`);
     return await obj.json();
 }
+function chiamaRicerca(){
+    window.location.href = "search.html"
+}
 
