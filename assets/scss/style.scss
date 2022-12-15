@@ -219,14 +219,20 @@ main {
 aside {
     background-color: black;
     color: white;
-
+    h5{
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
     // height: 100vh;
     ul {
         padding: 5px;
 
         h4 {
             margin: 0;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 700;
         }
 
         h6 {
@@ -234,6 +240,7 @@ aside {
             margin: 0;
             padding: 0;
             font-size: 0.8rem;
+            font-weight: 700;
         }
 
         p {
@@ -254,6 +261,7 @@ footer {
     padding: 10px 0px;
     background-color: #181818;
     color: white;
+    
     .player {
         height: 10vh;
         width: 100vw;
@@ -387,12 +395,11 @@ footer {
         background-color: #262626;
     }
 }
+@media screen and (max-width:992px) {
+
+}
 
 #album_head {
     padding-top: 58px;
 }
 
-tr:hover {
-      background-color: rgba(128, 128, 128, 0.678);
-      border-radius: 10px;
-}

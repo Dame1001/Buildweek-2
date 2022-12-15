@@ -36,7 +36,7 @@ function caricaContenuto() {
                 div.innerHTML +=
                     `<tr>
                     <td class="text-end mostra_tabella"><h5 class="m-0">${i + 1}</h5></td>
-                    <td><img src="${album.data[i].album.cover_small}" alt="cover-album"></td>
+                    <td><img src="${album.data[i].album.cover_small}" onclick="getId(${album.data[i].album.id})" class="manina" alt="cover-album"></td>
                     <td><h4 class="m-0 manina" onclick="chiamataCanzone(${i})">${album.data[i].title}</h4></td>
                     <td class="text-end mostra_tabella"><p class="m-0">${album.data[i].rank}</p></td>
                     <td class="text-end mostra_tabella d-none d-lg-table-cell"><p class="m-0">${minuti2}:${secondi2}</p></td>
@@ -287,5 +287,9 @@ function chiamataCanzone(variabile) {
     caricaMusica(variabile, 1)
     caricaMusica(variabile, 1)
     playTrack();
+}
+function getId(id) {
+    window.location.href = "album.html"
+    sessionStorage.setItem('album', JSON.stringify(id))
 }
 window.addEventListener('load', caricaMusica)

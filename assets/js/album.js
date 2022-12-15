@@ -35,7 +35,7 @@ function caricaContenuto() {
             }
             div.innerHTML +=
                 `<tr>
-                    <td class="text-end mostra_tabella">${i + 1}</td>
+                    <td colspan="0.5" class="text-end mostra_tabella">${i + 1}</td>
                     <td><p class="m-0 fw-bold manina" onclick="chiamataCanzone(${i})">${album.tracks.data[i].title}</p><p class="m-0 fw-light manina" onclick="getIdArtist(${album.artist.id})">${album.tracks.data[i].artist.name}</p></td>
                     <td class="text-end mostra_tabella">${album.tracks.data[i].rank}</td>
                     <td class="text-end d-lg-none text-white">
