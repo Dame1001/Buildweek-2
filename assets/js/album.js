@@ -13,14 +13,14 @@ function caricaContenuto() {
         let secondi = album.duration % 60
         head.innerHTML = `
         <div class="col-12 bg-transparent text-white pb-3">
-            <div class="w-100 d-flex align-items-end p-2">
-            <img src="${album.cover_big}" class="card-img-top border border-dark shadow w-25" alt="#">
-            <div class="card-body w-100 px-3">
-                <p>ALBUM</p>
-                <h1 class="card-title pt-1 pb-4">${album.title}</h1>
+            <div class="w-100 d-flex flex-column flex-lg-row align-items-lg-end p-2">
+            <img src="${album.cover_big}" class="img-album card-img-top border border-dark shadow" alt="#">
+            <div class="card-body w-100 pt-5 pt-lg-0 px-lg-3">
+                <p class="fw-bold d-none d-lg-block">ALBUM</p>
+                <h1 class="display-1 fw-bold card-title pt-1 pb-4">${album.title}</h1>
                 <div class="card-text w-100 d-flex"><img src="${album.contributors[0].picture_small}" class="img-piccola"
                     alt="#">
-                <p class="card-text ps-2"><span class="manina" onclick="getIdArtist(${album.artist.id})"> ${album.artist.name}</span> - ${year} - ${album.nb_tracks} brani,  ${minuti}min ${secondi}sec.</p>
+                <p class="card-text ps-2"><span class="fw-bold manina" onclick="getIdArtist(${album.artist.id})"> ${album.artist.name}</span> - ${year} - <span class="fw-bold">${album.nb_tracks} brani</span>,  <span class="opacity-50">${minuti}min ${secondi}sec</span>.</p>
                 </div>
 
             </div>
@@ -35,15 +35,15 @@ function caricaContenuto() {
             }
             div.innerHTML +=
                 `<tr>
-                    <td colspan="0.5" class="text-end mostra_tabella">${i + 1}</td>
-                    <td><p class="m-0 fw-bold manina" onclick="chiamataCanzone(${i})">${album.tracks.data[i].title}</p><p class="m-0 fw-light manina sottolinea" onclick="getIdArtist(${album.artist.id})">${album.tracks.data[i].artist.name}</p></td>
-                    <td class="text-end mostra_tabella">${album.tracks.data[i].rank}</td>
+                    <td colspan="0.5" class="d-none d-lg-table-cell text-end mostra_tabella">${i + 1}</td>
+                    <td><p class="m-0 fw-bold manina" onclick="chiamataCanzone(${i})">${album.tracks.data[i].title}</p><p class="m-0 fw-light manina" onclick="getIdArtist(${album.artist.id})">${album.tracks.data[i].artist.name}</p></td>
+                    <td class="d-none d-lg-table-cell text-end mostra_tabella">${album.tracks.data[i].rank}</td>
                     <td class="text-end d-lg-none text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
                      <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                     </svg>
                     </td>
-                    <td class="text-end mostra_tabella">${minuti2}:${secondi2}</td>
+                    <td class="d-none d-lg-table-cell text-end mostra_tabella">${minuti2}:${secondi2}</td>
                 </tr>`
 
         }

@@ -1,8 +1,14 @@
 function cercaArtista(){
-let ricerca=document.querySelector('#cerca').value
+let ricerca=document.querySelector('#cerca')
 console.log(ricerca);
+ricerca.addEventListener("keyup",function(event){
+    // console.log(event.key)
+    // if(event.key === "Enter")
+{
+    document.querySelector('#bottone-ricerca-search').click();
+}});
 let stampa=document.querySelector('#pagina-search');
-chiamaJson(ricerca);
+chiamaJson(ricerca.value);
 function chiamaJson(numero) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${numero}`)
     .then(function (response) {
@@ -51,6 +57,7 @@ function getArtistId(id) {
     window.location.href = "artist.html"
     sessionStorage.setItem('album', JSON.stringify(id))
 }
+cercaArtista();
 
 function resetInput() {
     document.querySelector('#cerca').value = ''

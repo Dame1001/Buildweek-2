@@ -186,6 +186,7 @@ main {
             }
         }
     }
+    }
     .card {
         background-color: #181818;
 
@@ -232,6 +233,15 @@ main {
     .img-elenco{
         width:300px;
     }
+    .img-album{
+        width:60vw;
+        margin: auto;
+    }
+    @media screen and(min-width:992px){
+        .img-album{
+            width: 35%;
+        }
+    }
     @media screen and(min-width:992px){
         .img-elenco{
             width:100%;
@@ -246,7 +256,7 @@ main {
             background-color: #2c2c2c;
         }
     }
-}
+
 
 // @media screen and (max-width:768px) {
 //     main{
