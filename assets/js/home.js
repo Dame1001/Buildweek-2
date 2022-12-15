@@ -76,10 +76,26 @@ async function caricaContenuto() {
     for (let i = albums.length/3; i < albums.length; i++) {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3 d-flex flex-column">
-            <div class="card d-flex flex-row flex-lg-column justify-content-center align-items-center manina h-100">
-                <img src="${albums[i].cover_medium}" class="card-img-top mb-1" alt="#" onclick="getId(${albums[i].id})">
-                <h5 class="card-title w-75 text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
-                <p class="card-text w-75 text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
+            <div class="card d-flex flex-column">
+                <div class="d-flex flex-row flex-lg-column justify-content-between align-items-center manina h-100">
+                    <img src="${albums[i].cover_medium}" class="card-img-top mb-1 img-elenco" alt="#" onclick="getId(${albums[i].id})">
+                    <div class="w-75 d-flex flex-column align-items-center">
+                        <h5 class="w-75 card-title text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>
+                        <p class="w-75 card-text text-truncate pb-3 text-center" onclick="getIdArtist(${albums[i].artist.id})">${albums[i].artist.name}</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center d-lg-none">
+                    <div class="d-flex justify-content-between m-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-heart"
+                        viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots-vertical ms-5" viewBox="0 0 16 16">
+                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                    </div>
+                    <i class="fa fa-play-circle fa-3x m-3"></i>
+                </div>
             </div>
         </div>
         `
