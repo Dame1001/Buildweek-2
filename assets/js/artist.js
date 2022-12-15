@@ -292,4 +292,7 @@ function getId(id) {
     window.location.href = "album.html"
     sessionStorage.setItem('album', JSON.stringify(id))
 }
+function chiamaRicerca(){
+    window.location.href = "search.html"
+}
 window.addEventListener('load', caricaMusica)

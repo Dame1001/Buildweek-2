@@ -49,6 +49,9 @@ function caricaContenuto() {
         }
     });
 }
+function chiamaRicerca(){
+    window.location.href = "search.html"
+}
 
 function getIdArtist(id) {
     window.location.href = "artist.html"
