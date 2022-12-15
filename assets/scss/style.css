@@ -155,13 +155,14 @@ nav #bookmark {
   cursor: pointer;
 }
 
-
 .sottolinea:hover {
   text-decoration: underline;
 }
+
 .icona-mobile {
   font-size: 1.8rem;
 }
+
 .img-piccola {
   width: 30px;
   border-radius: 50%;
@@ -181,6 +182,10 @@ nav #bookmark {
   background: linear-gradient(180deg, #ceb558, #000);
 }
 
+#sezione_album {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (min-width: 992px) {
   #nav {
     background-color: black;
@@ -195,13 +200,23 @@ main {
   color: white;
 }
 main #cerca-barra {
+  margin: 0 auto;
   margin-top: 20px;
+  width: 35%;
+  padding: 10px;
   display: flex;
   justify-content: center;
+  background-color: #1b1b1b;
+  color: white;
+  border-radius: 20px;
 }
 main #cerca-barra input {
   background-color: #1b1b1b;
   color: white;
+  border: none;
+}
+main #cerca-barra input:focus {
+  outline: none;
 }
 main .card {
   background-color: #181818;

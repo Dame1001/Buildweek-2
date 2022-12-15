@@ -51,3 +51,7 @@ function getArtistId(id) {
     window.location.href = "artist.html"
     sessionStorage.setItem('album', JSON.stringify(id))
 }
+
+function resetInput() {
+    document.querySelector('#cerca').value = ''
+}
