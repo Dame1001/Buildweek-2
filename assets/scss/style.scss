@@ -100,7 +100,6 @@ nav {
 #scroll-main {
     overflow-y: scroll;
     height: 90vh;
-    padding-top: 1em;
 }
 #scroll-main::-webkit-scrollbar {
     background-color: transparent;
@@ -387,4 +386,8 @@ footer {
         margin-left: 3vw;
         background-color: #262626;
     }
+}
+
+#album_head {
+    padding-top: 58px;
 }
