@@ -114,6 +114,10 @@ nav {
     cursor: pointer;
 }
 
+.icona-mobile{
+    font-size: 1.8rem;
+}
+
 .img-piccola {
     width: 30px;
     border-radius: 50%;
@@ -201,6 +205,15 @@ main {
     .card-b{
         background-color: black;
     }
+    .img-elenco{
+        width:300px;
+    }
+    @media screen and(min-width:992px){
+        .img-elenco{
+            width:100%;
+            object-fit: cover;
+        }
+    }
     @media screen and (min-width:992px) {
         .card{
             background-color: #242424;
@@ -261,7 +274,7 @@ footer {
     padding: 10px 0px;
     background-color: #181818;
     color: white;
-    
+
     .player {
         height: 10vh;
         width: 100vw;
