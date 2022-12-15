@@ -155,10 +155,13 @@ nav #bookmark {
   cursor: pointer;
 }
 
+
 .sottolinea:hover {
   text-decoration: underline;
 }
-
+.icona-mobile {
+  font-size: 1.8rem;
+}
 .img-piccola {
   width: 30px;
   border-radius: 50%;
@@ -240,6 +243,16 @@ main #p2 {
 }
 main .card-b {
   background-color: black;
+}
+main .img-elenco {
+  width: 300px;
+}
+@media screen and (min-width: 992px) {
+  main .img-elenco {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media screen and (min-width: 992px) {
   main .card {
