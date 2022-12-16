@@ -77,7 +77,7 @@ async function caricaContenuto() {
         divSecondeCard.innerHTML += `
         <div class="col-12 col-lg-2 my-3 d-flex flex-column">
             <div class="card d-flex flex-column">
-                <div class="d-flex flex-row flex-lg-column justify-content-between align-items-center manina h-100">
+                <div class="d-flex flex-column justify-content-between align-items-center manina h-100">
                     <img src="${albums[i].cover_medium}" class="card-img-top mb-1 img-elenco" alt="#" onclick="getId(${albums[i].id})">
                     <div class="w-75 d-flex flex-column align-items-center">
                         <h5 class="w-75 card-title text-truncate text-center" onclick="getId(${albums[i].id})">${albums[i].title}</h5>

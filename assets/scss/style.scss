@@ -7,6 +7,7 @@
 html, body {
     font-family: 'Lato', sans-serif;
     max-width: 100%;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -85,6 +86,7 @@ nav {
 
 #scroll{
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 360px;
 }
 #scroll::-webkit-scrollbar {
@@ -99,6 +101,7 @@ nav {
 
 #scroll-main {
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 90vh;
 }
 #scroll-main::-webkit-scrollbar {
@@ -108,6 +111,13 @@ nav {
 #scroll-main::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: rgba(128, 128, 128, 0.808);
+}
+
+@media screen and (max-width:992px) {
+    #scroll-main {
+        overflow-y: scroll;
+        height: 85vh;
+    }
 }
 
 .manina {
@@ -192,76 +202,83 @@ main {
             }
         }
     }
+}
+@media screen and (max-width:1024px) {
+    #cerca-barra{
+        input{
+            width: 100%;
+        }
     }
-    .card {
-        background-color: #181818;
+}
+.card {
+    background-color: #181818;
 
-        .card-img-left {
-            height: 80px;
-            width: 80px;
-        }
+    .card-img-left {
+        height: 80px;
+        width: 80px;
     }
-    #card-grande{
-        background-image: linear-gradient(to top right,black,#1d1d1d);
-        border: none;
-        margin-top: 20px;
-    }
-    
-    #immagine-card-grande{
-        height: 150px;
-            width: 150px;
-            margin: auto 15px;
-    }
-    #button1{
-        color: black;
-        background-color: #1ed760;
-        border-radius: 25px;
-        border: none;
-        padding: 10px 35px;
-    }
-    #button2{
-        color: white;
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 25px;
-        padding: 10px 35px;
-    }
-    #p1{
-        font-size: 1rem;
-    }
-    #p2{
-        font-size: 0.7rem;
-        color: #606060;
-    }
-    .card-b{
-        background-color: black;
-    }
-    .img-elenco{
-        width:300px;
-    }
+}
+#card-grande{
+    background-image: linear-gradient(to top right,black,#1d1d1d);
+    border: none;
+    margin-top: 20px;
+}
+
+#immagine-card-grande{
+    height: 150px;
+        width: 150px;
+        margin: auto 15px;
+}
+#button1{
+    color: black;
+    background-color: #1ed760;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 35px;
+}
+#button2{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px 35px;
+}
+#p1{
+    font-size: 1rem;
+}
+#p2{
+    font-size: 0.7rem;
+    color: #606060;
+}
+.card-b{
+    background-color: black;
+}
+.img-elenco{
+    width:300px;
+}
+.img-album{
+    width:60vw;
+    margin: auto;
+}
+@media screen and(min-width:992px){
     .img-album{
-        width:60vw;
-        margin: auto;
+        width: 35%;
     }
-    @media screen and(min-width:992px){
-        .img-album{
-            width: 35%;
-        }
+}
+@media screen and(min-width:992px){
+    .img-elenco{
+        width:100%;
+        object-fit: cover;
     }
-    @media screen and(min-width:992px){
-        .img-elenco{
-            width:100%;
-            object-fit: cover;
-        }
+}
+@media screen and (min-width:992px) {
+    .card{
+        background-color: #242424;
     }
-    @media screen and (min-width:992px) {
-        .card{
-            background-color: #242424;
-        }
-        .card-b {
-            background-color: #2c2c2c;
-        }
+    .card-b {
+        background-color: #2c2c2c;
     }
+}
 
 
 // @media screen and (max-width:768px) {
@@ -425,7 +442,7 @@ footer {
 @media screen and (max-width:992px) {
     footer{
         width: 94vw;
-        bottom: 110px!important;
+        bottom: 70px!important;
         height: 70px;
         margin: 0;
         padding: 0;
@@ -438,7 +455,6 @@ footer {
 @media screen and (max-width:992px) {
     #footer-home{
         width: 94vw;
-        bottom: 95px;
         height: 70px;
         margin: 0;
         padding: 0;
@@ -447,9 +463,6 @@ footer {
         margin-left: 3vw;
         background-color: #262626;
     }
-}
-@media screen and (max-width:992px) {
-
 }
 
 #album_head {

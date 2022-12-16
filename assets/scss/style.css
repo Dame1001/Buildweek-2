@@ -53,6 +53,7 @@
 html, body {
   font-family: "Lato", sans-serif;
   max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -122,6 +123,7 @@ nav #bookmark {
 
 #scroll {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 360px;
 }
 
@@ -138,6 +140,7 @@ nav #bookmark {
 
 #scroll-main {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 90vh;
 }
 
@@ -151,6 +154,12 @@ nav #bookmark {
   background-color: rgba(128, 128, 128, 0.808);
 }
 
+@media screen and (max-width: 992px) {
+  #scroll-main {
+    overflow-y: scroll;
+    height: 85vh;
+  }
+}
 .manina {
   cursor: pointer;
 }
@@ -223,6 +232,11 @@ main #cerca-barra input:focus {
   outline: none;
 }
 
+@media screen and (max-width: 1024px) {
+  #cerca-barra input {
+    width: 100%;
+  }
+}
 .card {
   background-color: #181818;
 }
@@ -430,7 +444,7 @@ footer i.fa-step-backward {
 @media screen and (max-width: 992px) {
   footer {
     width: 94vw;
-    bottom: 110px !important;
+    bottom: 70px !important;
     height: 70px;
     margin: 0;
     padding: 0;
@@ -443,7 +457,6 @@ footer i.fa-step-backward {
 @media screen and (max-width: 992px) {
   #footer-home {
     width: 94vw;
-    bottom: 95px;
     height: 70px;
     margin: 0;
     padding: 0;
