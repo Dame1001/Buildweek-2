@@ -278,8 +278,15 @@ function getIdArtist(id) {
     sessionStorage.setItem('album', JSON.stringify(id))
 }
 
+let salvato=0;
 function changeBtn() {
+    if(salvato==0){
     document.querySelector('#button2').innerHTML = `<b>Salvato</b>`
+    salvato=1;
+    }else{
+        document.querySelector('#button2').innerHTML = `<b>Salva</b>`
+        salvato=0;
+    }
 }
 
 // for(let i=0;i<cuore.length;i++){
