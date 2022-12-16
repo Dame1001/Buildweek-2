@@ -56,6 +56,9 @@ html, body {
   max-height: 100%;
   overflow: hidden;
 }
+html:hover, body:hover {
+  cursor: default;
+}
 
 @media screen and (min-width: 992px) {
   #main-home,
@@ -150,6 +153,22 @@ nav #bookmark {
 }
 
 #scroll-main::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(128, 128, 128, 0.808);
+}
+
+#scroll-search {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+#scroll-search::-webkit-scrollbar {
+  background-color: transparent;
+  width: 15px;
+}
+
+#scroll-search::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(128, 128, 128, 0.808);
 }
