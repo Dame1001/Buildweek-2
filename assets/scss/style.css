@@ -114,7 +114,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.495);
   color: rgba(255, 255, 255, 0.499);
 }
-nav ul {
+nav ul a {
   color: rgba(255, 255, 255, 0.499);
 }
 nav #likes {
@@ -133,7 +133,7 @@ nav .playlist {
 #scroll {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 35vh;
+  height: 40vh;
 }
 
 .playlist:hover {
@@ -185,7 +185,7 @@ nav .playlist {
 
 @media screen and (max-width: 992px) {
   #scroll {
-    height: 35vh;
+    height: 40vh;
   }
   #scroll-main {
     overflow-y: scroll;
