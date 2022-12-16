@@ -17,7 +17,7 @@ function caricaContenuto() {
             <img src="${album.cover_big}" class="img-album card-img-top border border-dark shadow" alt="#">
             <div class="card-body w-100 pt-5 pt-lg-0 px-lg-3">
                 <p class="fw-bold d-none d-lg-block">ALBUM</p>
-                <h1 class="display-1 fw-bold card-title pt-1 pb-4">${album.title}</h1>
+                <h1 class="display-5 fw-bold card-title pt-1 pb-4">${album.title}</h1>
                 <div class="card-text w-100 d-flex"><img src="${album.contributors[0].picture_small}" class="img-piccola"
                     alt="#">
                 <p class="card-text ps-2"><span class="fw-bold manina" onclick="getIdArtist(${album.artist.id})"> ${album.artist.name}</span> - ${year} - <span class="fw-bold">${album.nb_tracks} brani</span>,  <span class="opacity-50">${minuti}min ${secondi}sec</span>.</p>
