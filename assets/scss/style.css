@@ -112,7 +112,10 @@ header .svg-head-3 {
 
 nav {
   background-color: rgba(0, 0, 0, 0.495);
-  color: white;
+  color: rgba(255, 255, 255, 0.499);
+}
+nav ul {
+  color: rgba(255, 255, 255, 0.499);
 }
 nav #likes {
   padding: 1px 6px 2px;
@@ -123,11 +126,18 @@ nav #bookmark {
   background-color: darkgreen;
   color: lightgreen;
 }
+nav .playlist {
+  line-height: 1rem;
+}
 
 #scroll {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 360px;
+  height: 35vh;
+}
+
+.playlist:hover {
+  color: white;
 }
 
 #scroll::-webkit-scrollbar {
@@ -174,6 +184,9 @@ nav #bookmark {
 }
 
 @media screen and (max-width: 992px) {
+  #scroll {
+    height: 35vh;
+  }
   #scroll-main {
     overflow-y: scroll;
     height: 85vh;
@@ -249,6 +262,9 @@ main #cerca-barra input {
 }
 main #cerca-barra input:focus {
   outline: none;
+}
+main .hover-album:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 1024px) {

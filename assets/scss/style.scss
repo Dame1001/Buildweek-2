@@ -73,8 +73,10 @@ header{
 nav {
     // width:30vw;
     background-color: rgba(0, 0, 0, 0.495);
-    color: white;
-
+    color: rgba(255, 255, 255, 0.499);
+    ul{
+        color: rgba(255, 255, 255, 0.499);
+    }
     // height: 100vh;
     #likes {
         padding: 1px 6px 2px;
@@ -85,12 +87,18 @@ nav {
         background-color: darkgreen;
         color: lightgreen;
     }
+    .playlist{
+        line-height: 1rem;
+    }
 }
 
 #scroll{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 360px;
+   height: 35vh;
+}
+.playlist:hover{
+    color: white;
 }
 #scroll::-webkit-scrollbar {
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -131,6 +139,9 @@ nav {
 }
 
 @media screen and (max-width:992px) {
+    #scroll{
+        height: 35vh;
+    }
     #scroll-main {
         overflow-y: scroll;
         height: 85vh;
@@ -218,6 +229,10 @@ main {
                 outline: none;
             }
         }
+    }
+    .hover-album:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+
     }
 }
 @media screen and (max-width:1024px) {

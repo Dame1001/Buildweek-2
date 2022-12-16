@@ -34,7 +34,7 @@ function caricaContenuto() {
                 secondi2=`0${secondi2}`;
             }
             div.innerHTML +=
-                `<tr>
+                `<tr class="hover-album">
                     <td colspan="0.5" class="d-none d-lg-table-cell text-end mostra_tabella">${i + 1}</td>
                     <td><p class="m-0 fw-bold manina" onclick="chiamataCanzone(${i})">${album.tracks.data[i].title}</p><p class="m-0 fw-light manina" onclick="getIdArtist(${album.artist.id})">${album.tracks.data[i].artist.name}</p></td>
                     <td class="d-none d-lg-table-cell text-end mostra_tabella">${album.tracks.data[i].rank}</td>
