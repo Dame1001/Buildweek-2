@@ -91,7 +91,10 @@ async function caricaContenuto() {
                         <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                         </svg>
                     </div>
-                    <i class="fa fa-play-circle fa-3x m-3"></i>
+                    <div class="d-flex align-items-center">
+                    <p>${albums[i].nb_tracks} brani</p>
+                    <i class="fa fa-play-circle fa-3x m-3" onclick="getId(${albums[i].id})"></i>
+                    </div>
                 </div>
             </div>
         </div>

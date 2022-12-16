@@ -158,7 +158,10 @@
               </div>
             </div>
           </div>
-          <h1 class="my-5 my-lg-2 font-weight-bold">Buongiorno</h1>
+          <div class="d-flex d-lg-block justify-content-between align-items-center">
+            <h1 class="my-5 my-lg-2 font-weight-bold">Buongiorno</h1> <div class="d-lg-none"><i class="bi bi-bell me-2"></i><i class="bi bi-clock mx-2"></i><i class="bi bi-gear ms-2"></i></div>
+          </div>
+          
           <h2 class="d-block d-lg-none my-5">Musica</h2>
           <div id="popolaPrimeCard" class="row">
 
@@ -279,17 +282,18 @@
         <div class="details d-flex text-center align-items-center" id="footer-contenitore">
           <div class="track-art d-none d-lg-block"></div>
           <div class="container d-flex flex-lg-column align-items-center justify-content-center">
-            <div><p class="track-name text-truncate">Track Name</p></div>
+            <div> <p class="track-name text-truncate mx-4 mx-lg-0 ">Track Name</p></div>
             <div class="track-artist d-none d-lg-block">Track Artist</div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+          
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
             class="bi bi-music-player-fill d-lg-none me-2" viewBox="0 0 16 16">
             <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
             <path
               d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm1 2h6a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-          </svg>
+          </svg> -->
           <div>
-            <i class="bi bi-heart fa-2x me-4 me-lg-0 manina" onclick="coloraVerde(this)"></i>
+            <i class="bi bi-heart fa-2x mx-4 mx-lg-0 manina" onclick="coloraVerde(this)"></i>
             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart heart_spoty"
               viewBox="0 0 16 16">
               <path
@@ -305,7 +309,7 @@
               <i class="fa fa-step-backward fa-1x"></i>
             </div>
             <div class="playpause-track">
-              <i class="fa fa-play-circle fa-2x"></i>
+              <i class="fa fa-play-circle fa-2x mx-4 mx-lg-0  "></i>
             </div>
             <div class="next-track d-none d-lg-block">
               <i class="fa fa-step-forward fa-1x"></i>
